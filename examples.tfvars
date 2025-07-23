@@ -11,7 +11,7 @@ region      = "ap-south-1"
 
 create = {
   # Flag for VPC, if VPC is set to true, the vpc will be created or if set to false the existing vpc will be created.
-  vpc = false
+  vpc = true
   existing_vpc = false
   s3  = false
 }
@@ -45,6 +45,7 @@ vpc_conf = {
   vpc_cloudwatch_logs = {
     name              = "/aws/vpc/vpc_flow_logs"
     retention_in_days = 0
+    create_kms        = false
   }
 
   vpc_flow_logs = {
